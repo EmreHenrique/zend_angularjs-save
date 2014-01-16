@@ -1,0 +1,60 @@
+<?php echo $this->doctype(); ?>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink()
+                ->prependStylesheet($this->basePath() . '/css/style.css')
+                ->prependStylesheet($this->basePath() . '/css/bootstrap-datepicker.css')
+        ?>
+
+        <!-- Scripts -->
+
+        <!--<script data-require="angular.js@*" data-semver="1.2.0-rc3-nonmin" src="http://localhost/zend_angularjs-save/public/js/angular.js"></script>-->
+        <!--<script data-require="ng-table@*" data-semver="0.3.0" src="http://localhost/zend_angularjs-save/public/js/ng-table.js"></script>-->
+
+        <link data-require="ng-table@*" data-semver="0.3.0" rel="stylesheet" href="http://localhost/zend_angularjs-save/public/css/ng-table.css" />
+        <link data-require="bootstrap-css@*" data-semver="3.0.0" rel="stylesheet" href="http://localhost/zend_angularjs-save/public/css/bootstrap.min.css" />
+        <?php
+        echo $this->headScript()->setAllowArbitraryAttributes(true)
+                ->appendFile($this->basePath() . '/js/angular.js', 'text/javascript', array('data-require' => 'angular.js@*', 'data-semver' => '1.2.0-rc3-nonmin'))
+                ->appendFile($this->basePath() . '/js/ng-table.js', 'text/javascript', array('data-require' => 'ng-table@*', 'data-semver' => '0.3.0'))
+                ->appendFile($this->basePath() . '/js/jquery.js')
+                ->appendFile($this->basePath() . '/js/bootstrap-datepicker.js')
+                ->appendFile($this->basePath() . '/js/script.js')
+        ;
+        ?>
+
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>  
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
+
+    </head> 
+
+    <body ng-app="main">
+        <div> 
+            Nous avons codé les fonctions éditer, ajouter, et supprimer, toutes les fonctions fonctionnent sauf la fonction éditer qui est codé mais présente des erreurs auquel nous ne sommes pas parvenu  à corriger. </br>
+            Dé plus nous avons réalisé des pages propres à chaque fonctions, et une navigation entre les pages des fonctions entres elles ont été établie tout comme un retour vers la page d’index. </br>
+            La fonction supprimer lance une nouvelle page et récupérant l’ID et demande la suppression, quand le bouton est cliqué, la suppression a lieu. </br>
+            La fonction ajouter, et supprimer fonctionnent, il faut alors revenir à l’index pour voir les effets</br>
+            On vous dépose le tout.</br>
+            Github : https://github.com/EmreHenrique/zend_angularjs-save</br>
+            OpenShift : http://zend-emrehenrique.rhcloud.com/ en plus d’un mail</br>
+            Nous avons fait le mieux : malgré les erreurs nous avons compris le concept. </br>
+            Merci de votre compréhension.</br></br>
+            DOGAN Emre et LOPES SALGUEIRO Henrique</br>
+</div>
+
+        <?php echo $this->content; ?>
+        </br></br></br></br></br>
+        <footer>copyright DOGAN Emre et LOPES SALGUEIRO Henrique 2IWM1</footer>
+        </br></br></br></br></br>
+    </body>
+</html>

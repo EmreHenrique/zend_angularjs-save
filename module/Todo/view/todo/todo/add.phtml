@@ -1,0 +1,10 @@
+<h3>Effectuer un ajout</h3>
+<div  ng-controller="newTodoCtrl">
+    <label>tache</label>
+    <input type="text" ng-model="tache"/>
+    <label>Date tache</label>
+    <!--<input type="text" ng-model="tache_date"/>-->
+    <input type="text" datepicker id="datepicker" ng-model="tache_date" />
+    <button ng-click="createTodo()">add</button>
+    </br><td><a href="http://localhost/zend_angularjs-save/public/todo/index{{todo.id}}">Retour à l'index</a></br>
+</div>

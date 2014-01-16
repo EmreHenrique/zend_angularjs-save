@@ -1,0 +1,16 @@
+<h3>Page Index</h3>
+<div ng-controller="DemoCtrl">
+    <p><strong>Page:</strong> {{tableParams.page()}}</p>
+    <p><strong>Count per page:</strong> {{tableParams.count()}}</p>
+    
+    <table ng-table="tableParams" class="table">
+        <tr ng-repeat="todo in $data">
+            <td data-title="'ID'">{{todo.id}}</td>
+            <td data-title="'Date'">{{todo.date_tache}}</td>
+            <td data-title="'Tache'">{{todo.tache}}</td>
+            <td><a href="http://localhost/zend_angularjs-save/public/todo/add/{{todo.id}}">Ajout</a></br>
+            <a href="http://localhost/zend_angularjs-save/public/todo/delete/{{todo.id}}">Supprimer</a></br>
+            <a href="http://localhost/zend_angularjs-save/public/todo/edit/{{todo.id}}">Edition</a></td>
+        </tr>
+    </table>
+</div>

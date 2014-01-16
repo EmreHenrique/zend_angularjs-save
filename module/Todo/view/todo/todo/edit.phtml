@@ -1,0 +1,24 @@
+<!--<div  ng-controller="newTodoCtrl">
+    <label>tache</label>
+    <input type="text" ng-model="tache"/>
+    <label>Date tache</label>
+    <!--<input type="text" ng-model="tache_date"/>-->
+ <!--   
+ <input type="text" datepicker id="datepicker" ng-model="tache_date" />
+    <button ng-click="createTodo()">valide edition</button>
+</div>
+ -->
+
+<h3>Faire une edition</h3>
+<input name="id" type="hidden" value=0/>
+<div  ng-controller="DemoCtrl">
+    <label>tache</label>
+    <input type="text" ng-model="tache"/>
+    <label>Date tache</label>
+    <!--input type="text" ng-model="tache_date"/>-->
+
+   
+    <input type="text" datepicker id="datepicker" ng-model="tache_date" />
+    <button ng-click="createTodo()">Editer</button>
+    </br><td><a href="http://localhost/zend_angularjs-save/public/todo/index{{todo.id}}">Retour à l'index</a></br>
+</div>
